@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+//JH de aqui para abajo me lo creo automaticamente el auth
+//......php artisan make::auth y deberia funcionar no se si hay que conectarlo
+//a una base de datos o ya lo hace solo no lo se???????
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
